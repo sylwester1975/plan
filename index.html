@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>S10 i Węzeł Płock - Plan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            vertical-align: top;
+            cursor: zoom-in;
+        }
+        img.zoomed {
+            max-width: none;
+            display: block;
+            margin: 0;
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="droga-s10-i-wezel-plock.png" id="mapaS10" onclick="toggleZoom()">
+
+    <script>
+        function toggleZoom() {
+            const img = document.getElementById('mapaS10');
+            img.classList.toggle('zoomed');
+            
+            if (img.classList.contains('zoomed')) {
+                document.body.style.textAlign = 'left';
+            } else {
+                document.body.style.textAlign = 'center';
+            }
+        }
+    </script>
+
+</body>
+</html>
